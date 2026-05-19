@@ -46,6 +46,22 @@
                 ;
         };
 
+        tab_prev: tab_prev {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI &kp LSHIFT>
+                     , <&macro_tap &kp LBKT>
+                     , <&macro_release &kp LGUI &kp LSHIFT>;
+        };
+
+        tab_next: tab_next {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI &kp LSHIFT>
+                     , <&macro_tap &kp RBKT>
+                     , <&macro_release &kp LGUI &kp LSHIFT>;
+        };
+
         // SYMBOL layer with red RGB (hue 0)
         mo_sym: mo_sym {
             compatible = "zmk,behavior-macro";
@@ -178,7 +194,7 @@
             display-name = "Fn";
             bindings = <
 &studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans       &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans       &mkp LCLK  &tab_prev    &tab_next   &kp PRINTSCREEN  &kp F12
 &trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &trans       &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
                                        &trans       &trans     &trans                                                                   &trans       &trans     &trans
             >;
