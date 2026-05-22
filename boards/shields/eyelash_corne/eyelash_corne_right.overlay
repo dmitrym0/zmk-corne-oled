@@ -31,9 +31,3 @@
 &default_transform {
     col-offset = <7>;
 };
-
-/ {
-    sensors {
-        sensors = <>;
-    };
-};
