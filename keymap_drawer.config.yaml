@@ -133,6 +133,17 @@ parse_config:
     "&ltq 1 DELETE":
       tap: $$mdi:backspace-reverse-outline$$
       hold: $$mdi:navigation-variant$$
+    "&mo_sym":
+      tap: $$mdi:symbol$$
+      hold: SYMBOL
+    "&mo_num":
+      tap: $$mdi:numeric$$
+      hold: NUMBER
+    "&td_gui":
+      type: tap_dance
+      tap: $$mdi:apple-keyboard-command$$
+      hold: HYPER-L
+      shifted: $$mdi:gesture-tap-hold$$
     # Home rows
     "&hm LEFT_GUI A":
       tap: 'A'
